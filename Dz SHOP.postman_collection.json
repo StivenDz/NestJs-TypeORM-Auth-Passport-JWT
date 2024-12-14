@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "677a59c0-83fa-4f92-a849-88c8c2d46925",
+		"name": "Dz SHOP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23042025"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"XD shirt Pacus\",\r\n    \"sizes\":[\"SM\",\"M\",\"L\"],\r\n    \"gender\":\"men\",\r\n    \"price\":151.67,\r\n    \"tags\":[\"Shirt\",\"black\",\"promotion\",\"xd\"],\r\n    \"images\":[\r\n        \"http://image1.jpg\",\r\n        \"http://image2.jpg\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/products/xd_shirt9",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"xd_shirt9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/products/7f235dcb-67d4-4aaf-9dfc-e8beed21cdd4",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"7f235dcb-67d4-4aaf-9dfc-e8beed21cdd4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"XD shirt9 SQL\",\r\n    \"sizes\": [\r\n        \"SM\",\r\n        \"M\",\r\n        \"L\"\r\n    ],\r\n    \"gender\": \"men\",\r\n    \"price\": 200.67,\r\n    \"images\": [\r\n        \"http://image1.jpg\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/products/7f235dcb-67d4-4aaf-9dfc-e8beed21cdd4",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"7f235dcb-67d4-4aaf-9dfc-e8beed21cdd4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Add Product Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Usuario1/Pictures/iPhone/HVHS0827.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/files/product",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find Product Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/files/product/0c3bd615-3b50-40ed-9fc7-bcb6d62cd571.jpeg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"files",
+								"product",
+								"0c3bd615-3b50-40ed-9fc7-bcb6d62cd571.jpeg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test3@gmail.com\",\r\n    \"password\":\"Test123\",\r\n    \"fullName\":\"Tester\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"Test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Private Route Check",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM2MWRlYTYzLTc1NjQtNGM5Yy1iOTY2LTUxMWZkYTJhZDBiYiIsImlhdCI6MTczMzQyOTk0OH0.y4vE2KxzK9O0DOUEJHRnQhoRayBNk0zCyX4tVXEDAqE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/auth/private",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"private"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Private Route Check 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM2MWRlYTYzLTc1NjQtNGM5Yy1iOTY2LTUxMWZkYTJhZDBiYiIsImlhdCI6MTczMzQyOTk0OH0.y4vE2KxzK9O0DOUEJHRnQhoRayBNk0zCyX4tVXEDAqE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/auth/private2",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"private2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Private Route Check 3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM2MWRlYTYzLTc1NjQtNGM5Yy1iOTY2LTUxMWZkYTJhZDBiYiIsImlhdCI6MTczMzQyOTk0OH0.y4vE2KxzK9O0DOUEJHRnQhoRayBNk0zCyX4tVXEDAqE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/auth/private3",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"private3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check-auth-status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3MDE2ZTY3LWI2YmUtNGRkOS05MTA1LTU4NzFmMTU1ZDBjZSIsImlhdCI6MTczMzUyMzcxOH0.CoLU_jy9G2eZcw3iKwUCdIyXFDoTUkNiMZQaw6jsM2c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.20.65:3000/api/auth/check-auth-status",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"20",
+								"65"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"check-auth-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.20.65:3000/api/seed",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"20",
+						"65"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
